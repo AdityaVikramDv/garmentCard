@@ -1,0 +1,18 @@
+module.exports = {
+	entry:[
+	'./index.js'
+	],
+	output:{
+		path:__dirname,
+		filename:'main.js'
+	},
+	module:{
+		loaders:[
+			{
+				test:/\.jsx?$/,
+				loader:'babel-loader',
+				exclude:/node_modules/
+			}
+		]
+	}
+}
